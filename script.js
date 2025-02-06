@@ -1,25 +1,17 @@
-// Simple contact form validation
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-  event.preventDefault();
+// Add any desired interactivity here (e.g., smooth scrolling or animations)
+// For now, the contact section is static, but you could expand this with more interactive features later.
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+document.addEventListener('DOMContentLoaded', function () {
+  // Example: smooth scroll if you have a contact section in a longer page
+  const links = document.querySelectorAll('.social-icon');
 
-  if (name && email && message) {
-      alert("Thank you for reaching out!");
-      // You can add a more sophisticated form submission here (e.g., email or backend integration)
-  } else {
-      alert("Please fill out all fields.");
-  }
-});
+  links.forEach(link => {
+    link.addEventListener('mouseover', function () {
+      link.style.transform = "scale(1.1)";
+    });
 
-// Smooth Scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth",
-      });
+    link.addEventListener('mouseout', function () {
+      link.style.transform = "scale(1)";
+    });
   });
 });

@@ -67,7 +67,8 @@ nav .nav-links a:hover {
 }
 
 .hero h1 {
-    font-size: 50px;
+    font-style: oblique;
+    font-size: 40px;
     margin-bottom: 20px;
     opacity: 0;
     animation: fadeIn 2s forwards 0.5s;
@@ -130,11 +131,13 @@ nav .nav-links a:hover {
 
 .education-item {
     margin-bottom: 20px;
+    
 }
 
 .education-item h3 {
     font-size: 24px;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .education-item p {
@@ -170,57 +173,51 @@ nav .nav-links a:hover {
 }
 
 /* Contact Section */
-.contact {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
+.contact-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    animation: fadeIn 2s ease-out 0.5s;
-}
-
-.contact h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
-}
-
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#contact-form input,
-#contact-form textarea {
-    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #333;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-#contact-form button {
-    padding: 10px 20px;
-    background-color: #ff5733;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-}
-
-#contact-form button:hover {
-    background-color: #c04c1e;
-}
-
-.resume a {
-    font-size: 18px;
-    color: #ff5733;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .contact-info a {
     text-decoration: none;
-}
-
-.resume a:hover {
-    text-decoration: underline;
-}
+    color: #007BFF;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+  }
+  
+  .social-icon {
+    margin: 10px;
+    display: inline-block;
+  }
+  
+  .social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icon:hover img {
+    transform: scale(1.1);
+  }
 
 /* Footer */
 footer {
