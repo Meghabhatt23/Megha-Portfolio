@@ -1,0 +1,244 @@
+/* Resetting styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    cursor: url('https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.3/extra/cursors/default.cur'), auto; /* Custom cursor */
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav .nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: #ff5733; /* Change color on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: #000 url('hero-bg.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: white;
+    padding: 150px 20px;
+    margin-top: 50px; /* Adjusted for fixed header */
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards 0.5s;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeIn 2s forwards 1s;
+}
+
+.hero .cta-btn {
+    padding: 10px 20px;
+    background-color: #ff5733;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 2s forwards 1.5s;
+}
+
+.hero .cta-btn:hover {
+    background-color: #c04c1e;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+    animation: fadeIn 2s ease-out 0.5s;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Education Section */
+.education {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    animation: fadeIn 2s ease-out 0.5s;
+}
+
+.education h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-item h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.education-item p {
+    font-size: 18px;
+    color: #777;
+}
+
+/* Certificates Section */
+.certificates {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+    animation: fadeIn 2s ease-out 0.5s;
+}
+
+.certificates h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.certificate-item {
+    margin-bottom: 20px;
+}
+
+.certificate-item h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.certificate-item p {
+    font-size: 18px;
+    color: #777;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    animation: fadeIn 2s ease-out 0.5s;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #c04c1e;
+}
+
+.resume a {
+    font-size: 18px;
+    color: #ff5733;
+    text-decoration: none;
+}
+
+.resume a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
