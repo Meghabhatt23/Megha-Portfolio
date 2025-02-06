@@ -51,20 +51,25 @@ nav ul a:hover {
     opacity: 1;
 }
 .btn {
-    text-align: center;
+    display: inline-block; /* Allows buttons to be side by side */
     padding: 0.5em 1em;
     color: white;
     font-weight: 500;
     letter-spacing: 1px;
-    border-radius: 1.1em;
+    border-radius: 0.5em;
+    font-size: 1.1em;
     border: 2px solid white;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    text-align: center;
+    background-color: transparent;
+    margin-right: 1em; /* Adds spacing between buttons */
 }
 .btn:hover {
     background-color: white;
     color: var(--background);
 }
+
 span {
     background: linear-gradient(to right, #6cff52, #3ec5ff);
     -webkit-background-clip: text;
@@ -89,7 +94,7 @@ section{
 }
 #home img{
     width: 18vw;
-    border-radius: 20%;
+    border-radius: 50%;
     margin-top: 3em;
 }
 .info-box{
