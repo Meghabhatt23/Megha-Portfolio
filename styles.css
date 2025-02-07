@@ -71,10 +71,12 @@ nav ul a:hover {
 }
 
 span {
+    display: inline; /* Ensures it applies only to text */
     background: linear-gradient(to right, #6cff52, #3ec5ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 #menu {
     color: white;
     font-size: 3em;
@@ -132,3 +134,112 @@ section{
     background: linear-gradient(to bottom, #6cff52, #3ec5ff);
     
 }
+#about{
+    background-color: var(--second-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+}
+#about img{
+    width: 30vw;
+    border-radius: 1em;
+}
+.about-box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 2em;
+}
+.about-box p{
+    color: white;
+    opacity: 0.8;
+}
+.skills{
+    display: flex;
+    text-align: left;
+    gap: 10em;
+    margin-top: 3em;
+}
+.skills ul{
+    font-size: 1.3em;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    opacity: 0.8;
+    align-items: baseline;
+}
+.skills ul li span {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    font-size: 1.3em;
+    transition: transform 0.3s ease-in-out; /* Added the transition property */
+}
+
+.skills ul li span:hover{
+    transform: translateX(10px);
+
+}
+.skills ul li i{
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
