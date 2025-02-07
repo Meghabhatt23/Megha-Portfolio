@@ -290,15 +290,49 @@ form input{
 form input:focus{
     background: rgb(229, 229, 229);
 }
-footer{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10em;
-    bottom: 0;
-    background-color: var(--background);
-    width: 100%;
-    padding: 5em 15%;
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5em 15%;
+  gap: 3em;
+  background-color: var(--background);
+  color: white;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+footer .col-left, footer .col-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+footer h2 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+footer p {
+  font-size: 1.2em;
+  margin-bottom: 0.5em; /* Reduce margin between paragraphs */
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 1em;
+}
+
+footer .btn {
+  font-size: 1.2em;
+  padding: 1em 2em;
+  margin-top: 1em;
+}
+footer .col-left, footer .col-right {
+  margin-top: 0; /* Ensure no extra margin at the top */
+  margin-bottom: 0; /* Remove bottom margin to prevent extra space */
 }
 .col-left{
     display: flex;
