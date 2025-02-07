@@ -1,357 +1,396 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    scroll-behavior: smooth;
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 }
-
 :root {
-    --background: rgb(24, 24, 24);
-    --second-background: rgb(21, 21, 21);
-}
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
+  --background: rgb(24, 24, 24);
+  --second-background: rgb(21, 21, 21);
 }
 body {
-    min-height: 100vh;
-    background-color: var(--background);
+  min-height: 100vh;
+  background-color: var(--background);
 }
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 2em 15%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(15, 15, 0, 0.8);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2em 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(15, 15, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 ul {
-    display: flex;
-    align-items: center;
-    gap: 3em;
+  display: flex;
+  align-items: center;
+  gap: 3em;
 }
 nav ul  li a{
-    color: white;
-    opacity: 0.7;
-    transition: 0.2s ease-in-out;
+  color: white;
+  opacity: 0.7;
+  transition: 0.2s ease-in-out;
 }
 nav ul a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 .logo {
-    font-size: 2em;
-    color: white;
-    font-weight: 800;
-    opacity: 0.8;
-    transition: 0.2s ease-in-out;
+  font-size: 2em;
+  color: white;
+  font-weight: 800;
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
 }
 .logo:hover {
-    opacity: 1;
+  opacity: 1;
 }
 .btn {
-    display: inline-block; /* Allows buttons to be side by side */
-    padding: 0.5em 1em;
-    color: white;
-    font-weight: 500;
-    letter-spacing: 1px;
-    border-radius: 0.5em;
-    font-size: 1.1em;
-    border: 2px solid white;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    text-align: center;
-    background-color: transparent;
-    margin-right: 1em; /* Adds spacing between buttons */
+  display: inline-block; /* Allows buttons to be side by side */
+  padding: 0.5em 1em;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 0.5em;
+  font-size: 1.1em;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  background-color: transparent;
+  margin-right: 1em; /* Adds spacing between buttons */
 }
 .btn:hover {
-    background-color: white;
-    color: var(--background);
-    
+  background-color: white;
+  color: var(--background);
 }
 
 span {
-    display: inline; /* Ensures it applies only to text */
-    background: linear-gradient(to right, #6cff52, #3ec5ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  display: inline; /* Ensures it applies only to text */
+  background: linear-gradient(to right, #6cff52, #3ec5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #menu {
-    color: white;
-    font-size: 3em;
-    display: none;
+  color: white;
+  font-size: 3em;
+  display: none;
 }
 section{
-    min-height: 100vh;
-    padding: 5% 15%;
+  min-height: 100vh;
+  padding: 5% 15%;
 }
 #home{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2em;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  color: white;
 }
 #home img{
-    width: 18vw;
-    border-radius: 50%;
-    margin-top: 3em;
+  width: 18vw;
+  border-radius: 50%;
+  margin-top: 3em;
 }
 .info-box{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5em;
-    max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5em;
+  max-width: 600px;
 }
 .info-box h1{
-    font-size: 3em;
-    font-weight: 500;
+  font-size: 3em;
+  font-weight: 500;
 
 }
 .about-info h2 {
-    margin-top: 20px; /* Adds space above "Skills" */
+  margin-top: 20px; /* Adds space above "Skills" */
 }
 .about-box p{
-    color: white;
-    opacity: 0.8;
+  color: white;
+  opacity: 0.8;
 }
 .info-box h3{
-    font-size: 2em;
-    font-weight: 400;
+  font-size: 2em;
+  font-weight: 400;
 }
 .info-box p{
-    opacity: 0.7;
-    color: white;
+  opacity: 0.7;
+  color: white;
 }
 .info-box .btn:nth-of-type(2){
-    background-color: white;
-    color: var(--background);
+  background-color: white;
+  color: var(--background);
 }
 .info-box .btn:nth-of-type(2):hover{
-    background-color: var(--background);
-    color: white;
+  background-color: var(--background);
+  color: white;
 }
 ::-webkit-scrollbar{
-    width: 20px;
-    background-color: var(--background);
+  width: 20px;
+  background-color: var(--background);
 
 }
 ::-webkit-scrollbar-thumb{
-    background: linear-gradient(to bottom, #6cff52, #3ec5ff);
-    
+  background: linear-gradient(to bottom, #6cff52, #3ec5ff);
+  
 }
 #about{
-    background-color: var(--second-background);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5em;
-    font-size: 20px;
+  background-color: var(--second-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
 }
 #about img{
-    width: 30vw;
-    border-radius: 1em;
+  width: 30vw;
+  border-radius: 1em;
 }
 .about-box{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    gap: 2em;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 2em;
 }
 .about-box p{
-    color: white;
-    opacity: 0.8;
+  color: white;
+  opacity: 0.8;
 }
 .skills{
-    display: flex;
-    text-align: left;
-    gap: 10em;
-    margin-top: 3em;
+  display: flex;
+  text-align: left;
+  gap: 10em;
+  margin-top: 3em;
 }
 .skills ul{
-    font-size: 1.3em;
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    opacity: 0.8;
-    align-items: baseline;
+  font-size: 1.3em;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  opacity: 0.8;
+  align-items: baseline;
 }
 .skills ul li span {
-    display: flex;
-    gap: 0.5em;
-    align-items: center;
-    font-size: 1.3em;
-    transition: transform 0.3s ease-in-out; /* Added the transition property */
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  font-size: 1.3em;
+  transition: transform 0.3s ease-in-out; /* Added the transition property */
 }
 
 .skills ul li span:hover{
-    transform: translateX(10px);
+  transform: translateX(10px);
 
 }
 .skills ul li i{
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 .about-box h2{
-    font-size: 2.5em;
-    align-items: center;
+  font-size: 2.5em;
+  align-items: center;
 }
 .about-info p{
-  color: white;
-  margin-top: 10px;
+color: white;
+margin-top: 10px;
 }
 #services{
-    background-color: var(--background);
+  background-color: var(--background);
 }
 
 .header{
-    text-align: center;
-    font-size: 5em;
-    margin: 0.5em 0;
+  text-align: center;
+  font-size: 5em;
+  margin: 0.5em 0;
 
 }
 .services-container {
-    display: flex;
-    flex-wrap: wrap; /* Ensures wrapping if space runs out */
-    gap: 2em;
-    justify-content: center; /* Aligns boxes in the center */
+  display: flex;
+  flex-wrap: wrap; /* Ensures wrapping if space runs out */
+  gap: 2em;
+  justify-content: center; /* Aligns boxes in the center */
 }
 .box {
-    border: 3px solid rgb(49, 49, 49);
-    border-radius: 0.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    padding: 3em;
-    gap: 2em;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    flex: 1 1 250px; /* Allows resizing but keeps a min width */
-    max-width: 300px; /* Ensures the boxes don’t get too large */
+  border: 3px solid rgb(49, 49, 49);
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding: 3em;
+  gap: 2em;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  flex: 1 1 250px; /* Allows resizing but keeps a min width */
+  max-width: 300px; /* Ensures the boxes don’t get too large */
 }
 
 .box:hover{
-    border: 3px solid rgb(100, 100, 100);
-    transform: translateY(-10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1);
-    background-color: #3ec5ff;  /* Change background color on hover */
-    color: white;
-    transition: transform 0.3s, background-color 0.3s ease-out;
+  border: 3px solid rgb(100, 100, 100);
 }
 .box p{
-    opacity: 0.8;
+  opacity: 0.8;
 }
 .box h1{
-    font-size: 2em;
+  font-size: 2em;
 }
 .box img {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 0.5em;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0.5em;
 }
 #contact{
-    background-color: var(--second-background);
+  background-color: var(--second-background);
 }
-
 form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
 }
 form .input-box{
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 1em;
 }
 .info-box span{
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 form input{
-    font-size: 1.3em;
-    padding: 1em 5em;
-    border-radius: 0.5em;
-    border: none;
-    outline: none;
+  font-size: 1.3em;
+  padding: 1em 5em;
+  border-radius: 0.5em;
+  border: none;
+  outline: none;
 }
 form input:focus{
-    background: rgb(229, 229, 229);
+  background: rgb(229, 229, 229);
 }
 footer{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10em;
-    bottom: 0;
-    background-color: var(--background);
-    width: 100%;
-    padding: 5em 15%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10em;
+  bottom: 0;
+  background-color: var(--background);
+  width: 100%;
+  padding: 5em 15%;
 }
 .col-left{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 .col-box{
-    display: flex;
-    align-items: center;
-    gap: 1em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 .col-box i{
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 .col-box span{
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 .col-right{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    color: white;
-    max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  color: white;
+  max-width: 500px;
 }   
 .col-right span{
-    font-size: 1.3em;
+  font-size: 1.3em;
 }
 /*.col-right .social-icons{
-    display: flex;
-    align-items: baseline;
-    justify-content: left;
-    gap: 1em;
+  display: flex;
+  align-items: baseline;
+  justify-content: left;
+  gap: 1em;
 }
 .col-right .social-icons i{
-    font-size: 2em;
-    transition: 0.2s ease-in-out;
-    cursor: pointer;
+  font-size: 2em;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
 .social-icons i:hover {
-    color: #6cff52 !important;
+  color: #6cff52 !important;
 }  */
 .social-icons a {
-  color: white;
-  font-size: 2em;
-  transition: color 0.3s ease-in-out;
-  display: inline-block;
-  padding: 0.5em;
+color: white;
+font-size: 2em;
+transition: color 0.3s ease-in-out;
+display: inline-block;
+padding: 0.5em;
 }
 .social-icons a:hover {
-  color: #6cff52;  /* Change to the hover color you prefer */
+color: #6cff52;  /* Change to the hover color you prefer */
 }
 
-/* Media query for mobile responsiveness */
+@media(max-width:968px){
+  section{
+      padding: 8em 15%;
+  }
+  nav .btn{
+      display: none;
+  }
+  #menu{
+      display: block;
+  }
+  .links{
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      padding: 1em 3em;
+      color: white;
+      flex-direction: column;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+  }
+  .links a{
+      margin: 2em 0;
+      display: block;
+      font-size: 1.5em;
+      color: white;    
+  }
+  .links .active{
+      display: flex;
+  }
+  #home h1{
+      font-size: 4em;
+  }
+  #home h3{
+      font-size: 2em;
+  }
+  #home img{
+      width: 24vw;
+  }
+  #about{
+      flex-direction: column;
+  }
+  #about img{
+      width: 32vw;
+  }
+  #about h1{
+      font-size: 3em;
+  }
+  #about ul{
+      font-size:1em;
+  }
+}
 @media(max-width:768px){
   #home h1{
       font-size: 2.5em;
