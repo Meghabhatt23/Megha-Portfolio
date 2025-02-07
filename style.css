@@ -356,19 +356,22 @@ footer{
   footer {
       padding: 2em 10%;
       flex-direction: column; /* Stack columns vertically */
-      gap: 2em; /* Reduce gap between sections */
+      gap: 1.5em; /* Reduce gap between sections */
   }
 
   footer .col-left, footer .col-right {
       flex: 1 1 100%; /* Ensure each section takes full width */
+      margin-top: 0;
   }
 
   footer h2 {
       font-size: 1.8em; /* Smaller font size on mobile */
+      margin-top: 0;
   }
 
   footer p {
       font-size: 1.1em; /* Smaller paragraph text */
+     
   }
 
   footer .btn {
@@ -378,5 +381,13 @@ footer{
 
   footer .contact-info p {
       font-size: 1.1em; /* Adjust contact info font size */
-  }
+  } 
+  #about, #services, #contact {
+    padding-top: 0; /* Remove extra padding at the top of these sections */
+    margin-top: 0; /* Remove extra margin */
+}
+
+#about h1, #services h1, #contact h1 {
+    margin-top: 0; /* Remove margin-top for titles */
+}
 }
