@@ -32,7 +32,7 @@ ul {
     align-items: center;
     gap: 3em;
 }
-nav ul a {
+nav ul  li a{
     color: white;
     opacity: 0.7;
     transition: 0.2s ease-in-out;
@@ -300,7 +300,7 @@ footer{
     gap: 1em;
     color: white;
     max-width: 500px;
-}
+}   
 .col-right span{
     font-size: 1.3em;
 }
@@ -315,9 +315,10 @@ footer{
     transition: 0.2s ease-in-out;
     cursor: pointer;
 }
-.social-icons i:hover{
-    color: white;
+.social-icons i:hover {
+    color: #6cff52 !important;
 }
+
 @media(max-width:968px){
     section{
         padding: 8em 15%;
@@ -347,7 +348,7 @@ footer{
         color: white;    
     }
     .links .active{
-        display: block;
+        display: flex;
     }
     #home h1{
         font-size: 4em;
@@ -387,7 +388,7 @@ footer{
     .services .header{
         font-size: 3em;
     }
-    .contact .header{
+    #contact .header{
         font-size: 3em;
     }
     #contact .input-box span{
