@@ -109,6 +109,10 @@ section{
 .info-box h1{
     font-size: 5em;
     font-weight: 500;
+
+}
+.about-info h2 {
+    margin-top: 20px; /* Adds space above "Skills" */
 }
 .info-box h3{
     font-size: 2em;
@@ -186,7 +190,10 @@ section{
     font-size: 1.2em;
 }
 
-
+.about-box h2{
+    font-size: 2.5em;
+    align-items: center;
+}
 
 
 
