@@ -394,7 +394,9 @@ color: #6cff52;  /* Change to the hover color you prefer */
     color: white;
 }
 .links.active{
-  display: block;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.9);
 }
   #home h1{
       font-size: 4em;
