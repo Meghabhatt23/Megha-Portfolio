@@ -355,128 +355,157 @@ padding: 0.5em;
 color: #6cff52;  /* Change to the hover color you prefer */
 }
 
-@media(max-width:968px){
-  section{
+/* Default Styles for Mobile */
+@media(max-width: 968px) {
+  section {
       padding: 5em 10%;
   }
+
   nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em 10%;
-    background-color: rgba(15, 15, 0, 0.8);
-    position: fixed;
-    top: 0;
-    color: white;
-    width: 100%;
-    z-index: 1000;
-}
-  nav .btn{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1em 10%;
+      background-color: rgba(15, 15, 0, 0.8);
+      position: fixed;
+      top: 0;
+      color: white;
+      width: 100%;
+      z-index: 1000;
+  }
+
+  /* Hide the contact button in the nav for mobile */
+  nav .btn {
       display: none;
   }
-  nav ul {
-    display: none; /* Hide desktop menu */
-}
-#menu {
-  display: block;
-  font-size: 2.5em;
-  color: white;
-  cursor: pointer;
-  z-index: 1001; /* Make sure it is above other elements */
-}
-  .links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-        text-align: center;
-        padding: 1em 0;
-        z-index: 1000;
-    }
-  .links.active {
-    display: flex !important; /* Show menu when toggled */
-}
-.links a.active {
-  color: #4CAF50; /* Change color or style for active link */
-  font-weight: bold;
-}
 
-.links a {
-    margin: 1em 0;
-    display: block;
-    font-size: 1.5em;
-    color: white;
-}
-  #home h1{
+  nav ul {
+      display: none; /* Hide desktop menu */
+  }
+
+  #menu {
+      display: block;
+      font-size: 2.5em;
+      color: white;
+      cursor: pointer;
+      z-index: 1001; /* Make sure it is above other elements */
+  }
+
+  .links {
+      display: none; /* Hide the menu by default */
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      flex-direction: column;
+      text-align: center;
+      padding: 1em 0;
+      z-index: 1000;
+  }
+
+  .links.active {
+      display: flex !important; /* Show menu when toggled */
+  }
+
+  .links a.active {
+      color: #4CAF50; /* Change color for active link */
+      font-weight: bold;
+  }
+
+  .links a {
+      margin: 1em 0;
+      display: block;
+      font-size: 1.5em;
+      color: white;
+  }
+
+  /* Home section */
+  #home h1 {
       font-size: 4em;
   }
-  #home h3{
+
+  #home h3 {
       font-size: 2em;
   }
-  #home img{
+
+  #home img {
       width: 24vw;
   }
-  #about{
+
+  /* About section */
+  #about {
       flex-direction: column;
   }
-  #about img{
+
+  #about img {
       width: 32vw;
   }
-  #about h1{
+
+  #about h1 {
       font-size: 3em;
   }
-  #about ul{
-      font-size:1em;
+
+  #about ul {
+      font-size: 1em;
   }
 }
-@media(max-width:768px){
-  #home h1{
+
+/* For smaller screens below 768px */
+@media(max-width: 768px) {
+  #home h1 {
       font-size: 2.5em;
   }
-  #home h3{
+
+  #home h3 {
       font-size: 0.5em;
   }
-  #home img{
+
+  #home img {
       width: 32vw;
   }
-  #about .skills{
+
+  #about .skills {
       gap: 3em;
   }
+
   section {
-    padding: 4em 8%; /* Further reduce padding */
+      padding: 4em 8%; /* Further reduce padding */
   }
 
-  .services .header{
+  .services .header {
       font-size: 3em;
   }
-  #contact .header{
+
+  #contact .header {
       font-size: 3em;
   }
-  #contact .input-box span{
+
+  #contact .input-box span {
       font-size: 1.2em;
   }
-  .input-box input{
+
+  .input-box input {
       padding: 1.5em 1em;
   }
+
   form {
-    max-width: 90%; /* Reduce width on smaller screens */
-    padding: 1em;
-}
+      max-width: 90%; /* Reduce width on smaller screens */
+      padding: 1em;
+  }
 
-form input,
-form textarea {
-    font-size: 1.1em; /* Adjust font size for mobile */
-    padding: 0.8em; /* Reduce padding */
-    max-width: 100%; /* Allow full width */
-}
+  form input,
+  form textarea {
+      font-size: 1.1em; /* Adjust font size for mobile */
+      padding: 0.8em; /* Reduce padding */
+      max-width: 100%; /* Allow full width */
+  }
 
-form .input-box span {
-    font-size: 1.2em; /* Reduce label text size */
-}
-  footer{
+  form .input-box span {
+      font-size: 1.2em; /* Reduce label text size */
+  }
+
+  footer {
       flex-direction: column;
       gap: 5em;
       align-items: baseline;

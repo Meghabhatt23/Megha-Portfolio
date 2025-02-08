@@ -1,11 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const menu = document.querySelector("#menu");
-    const nav = document.querySelector(".links");
+// JavaScript to toggle nav menu for mobile view
+const menuIcon = document.querySelector('#menu');
+const navLinks = document.querySelector('.links');
 
-    menu.addEventListener("click", function () {
-        menu.classList.toggle('bx-x'); // Toggle icon
-        nav.classList.toggle('active'); // Show menu
-    });
+menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Toggle 'active' class to show/hide the nav
 });
 window.addEventListener('scroll', function () {
     let sections = document.querySelectorAll('section');
