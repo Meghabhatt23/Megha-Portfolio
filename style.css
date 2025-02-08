@@ -107,21 +107,6 @@ section{
   border-radius: 50%;
   margin-top: 3em;
 }
-.links {
-  display: none;
-  flex-direction: column;
-  background: rgba(0, 0, 0, 0.9);
-  position: absolute;
-  top: 60px; /* Adjust position */
-  right: 0;
-  width: 100%;
-  text-align: center;
-  padding: 1em 0;
-  z-index: 1000;
-}
-.links.active {
-  display: flex;
-}
 .info-box{
   display: flex;
   flex-direction: column;
@@ -382,10 +367,9 @@ color: #6cff52;  /* Change to the hover color you prefer */
     width: 100%;
     z-index: 1000;
 }
-nav .btn {
-  display: block; /* Ensure the button is visible */
-  margin-left: auto;
-}
+  nav .btn{
+      display: none;
+  }
   nav ul {
     display: none; /* Hide desktop menu */
 }
@@ -396,28 +380,27 @@ nav .btn {
   cursor: pointer;
   z-index: 1001; /* Make sure it is above other elements */
 }
-.links {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  flex-direction: column;
-  text-align: center;
-  padding: 1em 0;
-  z-index: 1000;
-}
-.links.active {
-  display: flex;
+  .links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        text-align: center;
+        padding: 1em 0;
+        z-index: 1000;
+    }
+  links.active {
+    display: flex !important; /* Show menu when toggled */
 }
 
-/* Style the links */
 .links a {
-  display: block;
-  font-size: 1.5em;
-  color: white;
-  padding: 1em 0;
+    margin: 1em 0;
+    display: block;
+    font-size: 1.5em;
+    color: white;
 }
   #home h1{
       font-size: 4em;
