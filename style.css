@@ -88,6 +88,11 @@ span {
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
+/* CSS for active class in mobile view */
+.links.active {
+  display: block;
+}
+
 
 #menu {
   color: white;
@@ -97,7 +102,9 @@ span {
 section{
   min-height: 100vh;
   padding: 5% 15%;
+  
 }
+
 #home{
   display: flex;
   flex-direction: column;
@@ -122,6 +129,10 @@ section{
   font-size: 3em;
   font-weight: 500;
 
+}
+.about-info span{
+  font-size: 35px;
+  font-style: oblique;
 }
 .about-info h2 {
   margin-top: 20px; /* Adds space above "Skills" */
@@ -328,22 +339,14 @@ footer{
   max-width: 500px;
 }   
 .col-right span{
-  font-size: 1.3em;
+  font-size: 1.5em;
+  text-decoration: underline white;
+  font-style: oblique;
 }
-/*.col-right .social-icons{
-  display: flex;
-  align-items: baseline;
-  justify-content: left;
-  gap: 1em;
+.col-right p{
+  font-size: 18px;
+  font-style: oblique;
 }
-.col-right .social-icons i{
-  font-size: 2em;
-  transition: 0.2s ease-in-out;
-  cursor: pointer;
-}
-.social-icons i:hover {
-  color: #6cff52 !important;
-}  */
 .social-icons a {
 color: white;
 font-size: 2em;
@@ -357,7 +360,7 @@ color: #6cff52;  /* Change to the hover color you prefer */
 
 @media(max-width:968px){
   section{
-      padding: 5em 10%;
+      padding: 8em 15%;
   }
 
   nav .btn{
