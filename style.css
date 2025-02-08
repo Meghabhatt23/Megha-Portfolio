@@ -43,8 +43,7 @@ nav ul  li a{
   color:white;
   opacity: 0.7;
   transition: 0.2s ease-in-out;
-  text-decoration: underline;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+ 
 }
 nav ul a:hover {
   opacity: 1;
@@ -86,6 +85,7 @@ span {
   display: inline; /* Ensures it applies only to text */
   background: linear-gradient(to right, #6cff52, #3ec5ff);
   -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
 }
 
