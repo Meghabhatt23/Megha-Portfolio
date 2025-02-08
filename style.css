@@ -107,6 +107,21 @@ section{
   border-radius: 50%;
   margin-top: 3em;
 }
+.links {
+  display: none;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 60px; /* Adjust position */
+  right: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1em 0;
+  z-index: 1000;
+}
+.links.active {
+  display: flex;
+}
 .info-box{
   display: flex;
   flex-direction: column;
@@ -367,9 +382,10 @@ color: #6cff52;  /* Change to the hover color you prefer */
     width: 100%;
     z-index: 1000;
 }
-  nav .btn{
-      display: none;
-  }
+nav .btn {
+  display: block; /* Ensure the button is visible */
+  margin-left: auto;
+}
   nav ul {
     display: none; /* Hide desktop menu */
 }
