@@ -1,10 +1,12 @@
 // JavaScript to toggle nav menu for mobile view
-const menuIcon = document.querySelector('#menu');
-const navLinks = document.querySelector('.links');
+const menu = document.querySelector("#menu");
+const nav = document.querySelector(".links");
 
-menuIcon.addEventListener('click', () => {
-    navLinks.classList.toggle('active'); // Toggle 'active' class to show/hide the nav
-});
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    nav.classList.toggle('active');
+
+};
 window.addEventListener('scroll', function () {
     let sections = document.querySelectorAll('section');
     let navLinks = document.querySelectorAll('.links a');
