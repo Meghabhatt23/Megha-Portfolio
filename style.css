@@ -89,11 +89,10 @@ span {
   -webkit-text-fill-color: transparent;
 }
 /* CSS for active class in mobile view */
+
 .links.active {
   display: block;
 }
-
-
 #menu {
   color: white;
   font-size: 3em;
@@ -395,8 +394,7 @@ color: #6cff52;  /* Change to the hover color you prefer */
 }
 .links.active{
   display: flex;
-  flex-direction: column;
-  background: rgba(0, 0, 0, 0.9);
+ 
 }
   #home h1{
       font-size: 4em;
