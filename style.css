@@ -416,6 +416,21 @@ color: #6cff52;  /* Change to the hover color you prefer */
   .input-box input{
       padding: 1.5em 1em;
   }
+  form {
+    max-width: 90%; /* Reduce width on smaller screens */
+    padding: 1em;
+}
+
+form input,
+form textarea {
+    font-size: 1.1em; /* Adjust font size for mobile */
+    padding: 0.8em; /* Reduce padding */
+    max-width: 100%; /* Allow full width */
+}
+
+form .input-box span {
+    font-size: 1.2em; /* Reduce label text size */
+}
   footer{
       flex-direction: column;
       gap: 5em;
