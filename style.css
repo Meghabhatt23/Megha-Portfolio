@@ -355,6 +355,18 @@ color: #6cff52;  /* Change to the hover color you prefer */
   section{
       padding: 5em 10%;
   }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 10%;
+    background-color: rgba(15, 15, 0, 0.8);
+    position: fixed;
+    top: 0;
+    color: white;
+    width: 100%;
+    z-index: 1000;
+}
   nav .btn{
       display: none;
   }
@@ -362,36 +374,34 @@ color: #6cff52;  /* Change to the hover color you prefer */
     display: none; /* Hide desktop menu */
 }
 #menu {
-  display: block !important; /* Ensure it shows */
+  display: block;
   font-size: 2.5em;
-  cursor: pointer;
   color: white;
-  position: absolute;
-  right: 10%;
-  top: 2em;
-  z-index: 1001; /* Ensure it appears above other elements */
+  cursor: pointer;
+  z-index: 1001; /* Make sure it is above other elements */
 }
 .links {
+  display: none;
   position: absolute;
   top: 100%;
   right: 0;
   width: 100%;
-  padding: 1em 3em;
+  background: rgba(0, 0, 0, 0.9);
   flex-direction: column;
   text-align: center;
-  background: rgba(0, 0, 0, 0.9);
-  display: none; /* Hidden by default */
-  z-index: 1000; /* Ensure it's above other content */
+  padding: 1em 0;
+  z-index: 1000;
 }
-  links.active {
-    display: flex !important; /* Show menu when toggled */
+.links.active {
+  display: flex;
 }
 
+/* Style the links */
 .links a {
-    margin: 1em 0;
-    display: block;
-    font-size: 1.5em;
-    color: white;
+  display: block;
+  font-size: 1.5em;
+  color: white;
+  padding: 1em 0;
 }
   #home h1{
       font-size: 4em;
