@@ -1,8 +1,12 @@
-const menu = document.querySelector("#menu");
-const nav = document.querySelector(".links");
+document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.querySelector("#menu");
+    const nav = document.querySelector(".links");
 
-menu.onclick = () => {
-    menu.classList.toggle('bx-x'); // Toggle icon change
-    nav.classList.toggle('active'); // Show/hide menu
-};
+    menu.addEventListener("click", function () {
+        menu.classList.toggle('bx-x'); // Toggle icon
+        nav.classList.toggle('active'); // Show menu
+    });
+});
+
+
 AOS.init();

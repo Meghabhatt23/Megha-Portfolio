@@ -353,7 +353,7 @@ color: #6cff52;  /* Change to the hover color you prefer */
 
 @media(max-width:968px){
   section{
-      padding: 8em 15%;
+      padding: 5em 10%;
   }
   nav .btn{
       display: none;
@@ -361,32 +361,38 @@ color: #6cff52;  /* Change to the hover color you prefer */
   nav ul {
     display: none; /* Hide desktop menu */
 }
-  #menu{
-      display: block;
-      font-size: 2.5em;
-      cursor: pointer;
-  }
-  .links{
-      position: absolute;
-      top: 100%;
-      right: 0;
-      width: 100%;
-      padding: 1em 3em;
-      color: white;
-      flex-direction: column;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.9);
-      display: none;
-  }
-  .links a{
-      margin: 1em 0;
-      display: block;
-      font-size: 1.5em;
-      color: white;    
-  }
-  .links .active{
-      display: flex;
-  }
+#menu {
+  display: block !important; /* Ensure it shows */
+  font-size: 2.5em;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  right: 10%;
+  top: 2em;
+  z-index: 1001; /* Ensure it appears above other elements */
+}
+.links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  padding: 1em 3em;
+  flex-direction: column;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.9);
+  display: none; /* Hidden by default */
+  z-index: 1000; /* Ensure it's above other content */
+}
+  links.active {
+    display: flex !important; /* Show menu when toggled */
+}
+
+.links a {
+    margin: 1em 0;
+    display: block;
+    font-size: 1.5em;
+    color: white;
+}
   #home h1{
       font-size: 4em;
   }
@@ -422,6 +428,10 @@ color: #6cff52;  /* Change to the hover color you prefer */
   #about .skills{
       gap: 3em;
   }
+  section {
+    padding: 4em 8%; /* Further reduce padding */
+  }
+
   .services .header{
       font-size: 3em;
   }
