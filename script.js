@@ -1,15 +1,11 @@
-// JavaScript to toggle nav menu for mobile view
 const menu = document.querySelector("#menu");
 const navLinksContainer = document.querySelector(".links");
 
 menu.onclick = () => {
-    console.log("Menu icon clicked");
-    menu.classList.toggle("bx-x");
-    navLinksContainer.classList.toggle("active");
-    console.log(navLinksContainer.classList);
-};
+  menu.classList.toggle('bx-x');
+  nav.classList.toggle('active');
 
-
+}
 window.addEventListener("scroll", function () {
   let sections = document.querySelectorAll("section");
   let navLinks = document.querySelectorAll(".links a");

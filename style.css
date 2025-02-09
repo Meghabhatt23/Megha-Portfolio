@@ -368,23 +368,21 @@ padding: 0.5em;
   display: block;
 }
   .links {
-        color: white;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        display: flex;
-        background: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-        text-align: center;
-        padding: 1em 3em;
-        background: rgba(0, 0, 0, 0.9);
-        
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      padding: 1em 3em;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
       
     }
 
 .links a{
-    margin: 2em;
+    margin: 2em 0;
     display: block;
     font-size: 1.5em;
     color: white;
