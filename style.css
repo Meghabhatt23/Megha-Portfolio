@@ -311,32 +311,86 @@ form input{
   border-radius: 0.5em;
   border: none;
   outline: none;
+} 
+#submit-button{
+  padding: 15px 30px; /* Larger padding for a bigger button */
+  font-size: 18px; /* Larger font size */
+  margin-top: 30px; /* Space below the form fields */
+  background: linear-gradient(135deg, #6c63ff, #00aaff); /* Gradient background */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to button */
+  transition: transform 0.2s ease-in-out; 
+  background 0.2s ease-in-out; /* Smooth transitions */
+  outline: none; /* Remove default focus outline */
 }
+
 form input:focus{
   background: rgb(229, 229, 229);
 }
-footer{
-  display:flex;
-  align-items: center;
+.footer-title {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-style: oblique;
+  text-decoration: underline white;
+  color: transparent; /* Make the text transparent to show the background gradient */
+  background: linear-gradient(135deg, #6c63ff, #00aaff); /* Gradient background */
+  -webkit-background-clip: text; /* Ensure the background gradient is clipped to the text */
+  background-clip: text; /* Ensure the background gradient is clipped to the text */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center the content */
+  align-items: flex-start; /* Align items to the start */
+  padding: 20px;
+  gap: 20px; /* Reduce gap to bring columns closer */
+}
+
+.col-left, .col-right {
+  flex: 1;
+  max-width: 45%; /* Ensure the columns take up less width to be closer */
+  text-align: center; /* Center the text within each column */
+}
+
+.col-left {
+  margin-top: 20px; /* Adjust margin-top to move col-left down */
+}
+
+.col-box {
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+  margin-bottom: 10px; /* Add some space between boxes */
+}
+
+.col-box span {
+  display: flex;
+  align-items: center; /* Ensure icon and text are centered vertically */
+  font-size: 18px; /* Adjust font size as needed */
+}
+
+.col-box i {
+  margin-right: 10px; /* Add space between icon and text */
+  font-size: 24px; /* Adjust icon size as needed */
+  line-height: 1; /* Ensure icon isn't cut off */
+  vertical-align: middle; /* Align the icon vertically in the middle */
+  padding: 2px; /* Add padding to ensure the icon is not cut off */
+}
+
+.social-icons {
+  display: flex;
   justify-content: center;
-  gap: 10em;
-  bottom: 0;
-  background-color: var(--background);
-  width: 100%;
-  padding: 5em 15%;
+  margin-top: 20px;
 }
-.col-left{
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-.col-box{
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
-.col-box i{
-  font-size: 1.2em;
+
+.social-icons a {
+  margin: 0 10px;
+  color: inherit; /* Use inherited color */
 }
 .col-box span{
   font-size: 1.2em;
@@ -430,6 +484,24 @@ nav.active .links {
   #about ul{
       font-size:1em;
   } 
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .col-left, .col-right {
+    max-width: 100%; /* Ensure full width on smaller screens */
+    margin-bottom: 20px; /* Add some space between columns on smaller screens */
+  }
+
+  .footer-title {
+    font-size: 20px;
+  }
+
+  .col-left {
+    margin-top: 0; /* Remove top margin for smaller screens */
+  }
 }
 @media(max-width:768px){
   #home h1{
@@ -449,10 +521,25 @@ nav.active .links {
   }
 
   .services .header{
-      font-size: 3em;
+      font-size: 2em;
   }
   #contact .header{
-      font-size: 3em;
+      font-size: 2em;
+      margin-top: 50px;
+  }
+  #contact {
+    padding: 10px;
+  }
+  
+  #contactForm {
+    max-width: 100%;
+    padding: 10px;
+  }
+  
+  .btn {
+    padding: 20px 40px; /* Larger padding for a bigger button */
+    font-size: 20px; /* Even larger font size */
+    margin-top: 40px; /* More space below the form fields */
   }
   #contact .input-box span{
       font-size: 1.2em;
