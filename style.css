@@ -354,8 +354,6 @@ transition: color 0.3s ease-in-out;
 display: inline-block;
 padding: 0.5em;
 }
-.social-icons a:h
-}
 
 @media(max-width:968px){
   section{
@@ -365,9 +363,7 @@ padding: 0.5em;
   nav .btn{
       display: none;
   }
-  nav ul {
-    display: none; 
-}
+
 #menu {
   display: block;
 }
@@ -383,7 +379,8 @@ padding: 0.5em;
         text-align: center;
         padding: 1em 3em;
         background: rgba(0, 0, 0, 0.9);
-        display: none;
+        
+      
     }
 
 .links a{
@@ -393,9 +390,8 @@ padding: 0.5em;
     color: white;
 }
 .links.active{
-  display: flex;
-  flex-direction: column;
-  background: rgba(0, 0, 0, 0.9);
+  display: block;
+ 
 }
   #home h1{
       font-size: 4em;
@@ -459,4 +455,3 @@ padding: 0.5em;
       align-items: baseline;
   }
 }
-   
