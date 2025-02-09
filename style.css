@@ -1,11 +1,12 @@
-* {
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
-  /*font-family: "Poppins", sans-serif; */
+ 
 }
 html {
   scroll-behavior: smooth;
@@ -82,13 +83,13 @@ nav ul a:hover {
 }
 
 span {
-  display: inline; /* Ensures it applies only to text */
+  display: inline; 
   background: linear-gradient(to right, #6cff52, #3ec5ff);
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
-/* CSS for active class in mobile view */
+
 
 .links.active {
   display: block;
@@ -134,7 +135,7 @@ section{
   font-style: oblique;
 }
 .about-info h2 {
-  margin-top: 20px; /* Adds space above "Skills" */
+  margin-top: 20px; 
 }
 .about-box p{
   color: white;
@@ -208,7 +209,7 @@ section{
   gap: 0.5em;
   align-items: center;
   font-size: 1.3em;
-  transition: transform 0.3s ease-in-out; /* Added the transition property */
+  transition: transform 0.3s ease-in-out; 
 }
 
 .skills ul li span:hover{
@@ -240,9 +241,9 @@ font-size: 18px;
 }
 .services-container {
   display: flex;
-  flex-wrap: wrap; /* Ensures wrapping if space runs out */
+  flex-wrap: wrap; 
   gap: 2em;
-  justify-content: center; /* Aligns boxes in the center */
+  justify-content: center;
 }
 .box {
   border: 3px solid rgb(49, 49, 49);
@@ -256,8 +257,8 @@ font-size: 18px;
   color: white;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  flex: 1 1 250px; /* Allows resizing but keeps a min width */
-  max-width: 300px; /* Ensures the boxes don’t get too large */
+  flex: 1 1 250px; 
+  max-width: 300px; 
 }
 
 .box:hover{
@@ -353,8 +354,7 @@ transition: color 0.3s ease-in-out;
 display: inline-block;
 padding: 0.5em;
 }
-.social-icons a:hover {
-color: #6cff52;  /* Change to the hover color you prefer */
+.social-icons a:h
 }
 
 @media(max-width:968px){
@@ -366,7 +366,7 @@ color: #6cff52;  /* Change to the hover color you prefer */
       display: none;
   }
   nav ul {
-    display: none; /* Hide desktop menu */
+    display: none; 
 }
 #menu {
   display: block;
@@ -394,7 +394,8 @@ color: #6cff52;  /* Change to the hover color you prefer */
 }
 .links.active{
   display: flex;
- 
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.9);
 }
   #home h1{
       font-size: 4em;
@@ -432,7 +433,7 @@ color: #6cff52;  /* Change to the hover color you prefer */
       gap: 3em;
   }
   section {
-    padding: 4em 8%; /* Further reduce padding */
+    padding: 4em 8%; 
   }
 
   .services .header{
@@ -448,7 +449,7 @@ color: #6cff52;  /* Change to the hover color you prefer */
       padding: 1.5em 1em;
   }
   form {
-    max-width: 90%; /* Reduce width on smaller screens */
+    max-width: 90%; 
     padding: 1em;
 }
  
@@ -457,4 +458,5 @@ color: #6cff52;  /* Change to the hover color you prefer */
       gap: 5em;
       align-items: baseline;
   }
-}
+} 
+   
