@@ -377,31 +377,35 @@ padding: 0.5em;
 #menu {
   display: block;
 }
-  .links {
-      position: absolute;
-      top: 100%;
-      width: 100%;
-      padding: 1em 3em;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.9);
-      display: none;
-      
-    }
-
-.links a{
-    margin: 2em 0;
-    display: block;
-    font-size: 1.5em;
-    color: white;
+.links {
+  
+  flex-direction: column;
+  position: absolute;
+  padding: 1em 3em;
+  display: flex;
+  top: 100%; /* Adjust based on your header height */
+  right: 0;
+  color:white; /* Adjust background color as needed */
+  width: 100%;
+  background-color:rgba(0, 0, 0, 0.9); /* Optional: Add shadow for better visibility */
+  box-shadow:0 0 15px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  display: none;
 }
+.link a{
+  margin: 2em 0;
+  display: block;
+  font-size: 1.5em;
+  color: white;
+}
+
 nav.active .links {
   display: flex;
 }
+
 .bx-menu {
   cursor: pointer;
+  display: block; /* Show the menu icon on smaller screens */
 }
 
   #home h1{
@@ -412,6 +416,7 @@ nav.active .links {
   }
   #home img{
       width: 24vw;
+    
   }
   #about{
       flex-direction: column;
