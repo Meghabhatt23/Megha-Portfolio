@@ -90,10 +90,9 @@ span {
   -webkit-text-fill-color: transparent;
 }
 .links {
-  display: none;
-  flex-direction: column;
+  display: flex;
+  gap: 3em; /* Adjust gap between links as needed */
 }
-
 .links.active {
   display: block;
 }
