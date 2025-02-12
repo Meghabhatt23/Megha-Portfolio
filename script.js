@@ -33,7 +33,7 @@ document.getElementById("submit-button").addEventListener("click", function () {
   }
 
   Email.send({
-      SecureToken: "YOUR64c2371b-919f-47f3-a514-ed1cfb41a859", // Replace with your SMTP.js secure token
+      SecureToken: "your token", // Replace with your SMTP.js secure token
       To: "meghabhatt241@gmail.com",   // Your email address
       From: email,
       Subject: "New Contact Form Submission",
