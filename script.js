@@ -22,5 +22,28 @@ window.addEventListener("scroll", function () {
     }
   });
 });
+document.getElementById("submit-button").addEventListener("click", function () {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+
+  if (name === "" || email === "" || message === "") {
+      alert("Please fill in all fields.");
+      return;
+  }
+
+  Email.send({
+      SecureToken: "YOUR64c2371b-919f-47f3-a514-ed1cfb41a859", // Replace with your SMTP.js secure token
+      To: "meghabhatt241@gmail.com",   // Your email address
+      From: email,
+      Subject: "New Contact Form Submission",
+      Body: `Name: ${name} <br> Email: ${email} <br> Message: ${message}`
+  }).then(
+      message => alert("Message sent successfully!")
+  ).catch(
+      error => alert("Error sending message. Please try again.")
+  );
+});
+
 
 AOS.init();
