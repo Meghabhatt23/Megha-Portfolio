@@ -22,28 +22,18 @@ window.addEventListener("scroll", function () {
     }
   });
 });
-document.getElementById("submit-button").addEventListener("click", function () {
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var message = document.getElementById("message").value;
-
-  if (name === "" || email === "" || message === "") {
-      alert("Please fill in all fields.");
-      return;
-  }
-
-  Email.send({
-      SecureToken: "your token", // Replace with your SMTP.js secure token
-      To: "meghabhatt241@gmail.com",   // Your email address
-      From: email,
-      Subject: "New Contact Form Submission",
-      Body: `Name: ${name} <br> Email: ${email} <br> Message: ${message}`
-  }).then(
-      message => alert("Message sent successfully!")
-  ).catch(
-      error => alert("Error sending message. Please try again.")
-  );
-});
+fetch("/.netlify/functions/getToken")
+   .then(response => response.json()) // parse the response to JSON
+   .then(data => {
+       // Now that we have the token, we can send the email
+       Email.send({
+           SecureToken: data.token, // Use the token you just fetched
+           To: "meghabhatt241@gmail.com", // Your email address
+           From: "your-email@example.com", // Your email (sender)
+           Subject: "New Contact Form Submission", // Email subject
+           Body: "Message details here..." // Your form data (name, message, etc.)
+       });
+   });
 
 
 AOS.init();
