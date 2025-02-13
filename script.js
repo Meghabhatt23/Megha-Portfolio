@@ -22,43 +22,47 @@ window.addEventListener("scroll", function () {
     }
   });
 });
-// Get form element
-const form = document.querySelector('#contact-form');
 
-// Add event listener for form submission
-form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the form from refreshing the page
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form"); // Make sure this selects your form
 
-    // Fetch the form data
-    const fullName = document.querySelector('#full-name').value;
-    const email = document.querySelector('#email').value;
-    const message = document.querySelector('#message').value;
+  if (!form) {
+      console.error("Form not found in the DOM!");
+      return;
+  }
 
-    // Fetch the token from the Netlify function
-    fetch("/.netlify/functions/getToken")
-        .then(response => response.json()) // Parse the response to JSON
-        .then(data => {
-            // Now that we have the token, send the email
-            Email.send({
-                SecureToken: data.token, // Use the token fetched from Netlify
-                To: "meghabhatt241@gmail.com", // Your email address
-                From: email, // Get the sender's email address from the form
-                Subject: "New Contact Form Submission", // Email subject
-                Body: `Full Name: ${fullName}<br>Email: ${email}<br>Message: ${message}` // Include form data in the body
-            })
-            .then(() => {
-                // Handle success (e.g., display a success message)
-                alert("Message sent successfully!");
-            })
-            .catch((error) => {
-                // Handle error (e.g., display an error message)
-                alert("Error sending message: " + error);
-            });
-        })
-        .catch((error) => {
-            // Handle error when fetching the token
-            alert("Error fetching token: " + error);
-        });
+  form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevents default form submission
+
+      console.log("Form submitted!"); // Debugging step
+
+      // Fetch the token before sending the email
+      fetch("/.netlify/functions/getToken")
+          .then(response => response.json())
+          .then(data => {
+              console.log("Token received:", data.token); // Debugging step
+              
+              // Now send the email
+              return Email.send({
+                  SecureToken: data.token, // Use the token
+                  To: "meghabhatt241@gmail.com",
+                  From: document.querySelector("input[type='email']").value, // Get user email input
+                  Subject: "New Contact Form Submission",
+                  Body: "Name: " + document.querySelector("input[type='text']").value +
+                        "<br>Email: " + document.querySelector("input[type='email']").value +
+                        "<br>Message: " + document.querySelector("input[type='text']:nth-of-type(2)").value
+              });
+          })
+          .then(() => {
+              console.log("Email sent successfully!"); // Debugging step
+              alert("Message sent successfully!");
+              form.reset();
+          })
+          .catch(error => {
+              console.error("Error:", error);
+              alert("Failed to send message.");
+          });
+  });
 });
 
 AOS.init();

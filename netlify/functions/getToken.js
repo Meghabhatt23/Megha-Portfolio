@@ -1,12 +1,6 @@
-exports.handler = async function(event, context) {
+exports.handler = async function() {
     return {
         statusCode: 200,
-        headers: {
-            "Access-Control-Allow-Origin": "*", // Allow all origins or specify your frontend URL
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            token: process.env.SMTP_SECURE_TOKEN  // Fetches the token securely from Netlify environment variables
-        })
+        body: JSON.stringify({ token: "84e37ae6-573b-457f-a8d8-babad7b41c7d" }) // Replace with your actual token
     };
 };
