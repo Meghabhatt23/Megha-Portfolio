@@ -24,45 +24,47 @@ window.addEventListener("scroll", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector("form"); // Make sure this selects your form
-
-  if (!form) {
-      console.error("Form not found in the DOM!");
-      return;
-  }
+  const form = document.querySelector("#contact-form"); // Corrected selector
 
   form.addEventListener("submit", function (event) {
       event.preventDefault(); // Prevents default form submission
 
-      console.log("Form submitted!"); // Debugging step
+      console.log("Form submitted! Fetching token...");
 
-      // Fetch the token before sending the email
+      // Get form values
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      if (!name || !email || !message) {
+          alert("Please fill in all fields.");
+          return;
+      }
+
       fetch("/.netlify/functions/getToken")
           .then(response => response.json())
           .then(data => {
-              console.log("Token received:", data.token); // Debugging step
+              console.log("Token received:", data.token);
               
-              // Now send the email
               return Email.send({
-                  SecureToken: data.token, // Use the token
+                  SecureToken: data.token,
                   To: "meghabhatt241@gmail.com",
-                  From: document.querySelector("input[type='email']").value, // Get user email input
+                  From: email, // Use sender's email
                   Subject: "New Contact Form Submission",
-                  Body: "Name: " + document.querySelector("input[type='text']").value +
-                        "<br>Email: " + document.querySelector("input[type='email']").value +
-                        "<br>Message: " + document.querySelector("input[type='text']:nth-of-type(2)").value
+                  Body: `Name: ${name} <br> Email: ${email} <br> Message: ${message}`
               });
           })
           .then(() => {
-              console.log("Email sent successfully!"); // Debugging step
+              console.log("Email sent successfully!");
               alert("Message sent successfully!");
               form.reset();
           })
           .catch(error => {
               console.error("Error:", error);
-              alert("Failed to send message.");
+              alert(`Failed to send message. Error: ${error.message}`);
           });
   });
 });
+
 
 AOS.init();
