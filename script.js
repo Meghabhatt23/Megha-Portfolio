@@ -24,45 +24,55 @@ window.addEventListener("scroll", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector("#contact-form"); // Corrected selector
+  const form = document.querySelector("#contact-form");
 
   form.addEventListener("submit", function (event) {
-      event.preventDefault(); // Prevents default form submission
+    event.preventDefault(); // Prevent default form submission
 
-      console.log("Form submitted! Fetching token...");
+    console.log("Form submitted! Fetching token...");
 
-      // Get form values
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
+    // Get form values
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
-      if (!name || !email || !message) {
-          alert("Please fill in all fields.");
-          return;
-      }
+    if (!name || !email || !message) {
+      alert("Please fill in all fields.");
+      return;
+    }
 
-      fetch("/.netlify/functions/getToken")
-          .then(response => response.json())
-          .then(data => {
-              console.log("Token received:", data.token);
-              
-              return Email.send({
-                  SecureToken: data.token,
-                  To: "meghabhatt241@gmail.com",
-                  From: email, // Use sender's email
-                  Subject: "New Contact Form Submission",
-                  Body: `Name: ${name} <br> Email: ${email} <br> Message: ${message}`
-              });
-          })
-          .then(() => {
-              console.log("Email sent successfully!");
-              alert("Message sent successfully!");
-              form.reset();
-          })
-          .catch(error => {
-              console.error("Error:", error);
-              alert(`Failed to send message. Error: ${error.message}`);
-          });
+    fetch("/.netlify/functions/getToken")
+      .then(response => {
+        if (!response.ok) {
+          return response.text().then(text => { throw new Error(`Network response was not ok: ${response.status} - ${response.statusText} - ${text}`); });
+        }
+        const contentType = response.headers.get('content-type');
+        if (contentType && contentType.includes('application/json')) {
+          return response.json();
+        } else {
+          throw new Error('Response was not JSON');
+        }
+      })
+      .then(data => {
+        console.log("Token received:", data.token);
+
+        return Email.send({
+          SecureToken: data.token,
+          To: "meghabhatt241@gmail.com",
+          From: email,
+          Subject: "New Contact Form Submission",
+          Body: `Name: ${name} <br> Email: ${email} <br> Message: ${message}`
+        });
+      })
+      .then(() => {
+        console.log("Email sent successfully!");
+        alert("Message sent successfully!");
+        form.reset();
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert(`Failed to send message. Error: ${error.message}`);
+      });
   });
 });
 
