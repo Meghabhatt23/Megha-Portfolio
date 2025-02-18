@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("/.netlify/functions/getToken")
       .then(response => {
         if (!response.ok) {
-          return response.text().then(text => { throw new Error(`Network response was not ok: ${response.status} - ${response.statusText} - ${text}`); });
+          throw new Error('Network response was not ok');
         }
         const contentType = response.headers.get('content-type');
         if (contentType && contentType.includes('application/json')) {
@@ -75,6 +75,5 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
-
 
 AOS.init();
