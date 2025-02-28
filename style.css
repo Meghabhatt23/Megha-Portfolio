@@ -475,7 +475,10 @@ nav.active .links {
       flex-direction: column;
   }
   #about img{
-      width: 32vw;
+    width: 100%;
+    max-width: 350px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block;
   }
   #about h1{
       font-size: 3em;
